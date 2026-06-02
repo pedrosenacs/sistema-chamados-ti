@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Administrativa - Sistema de Chamados</title>
+    <link rel="stylesheet" href="style.css?v=200">
+</head>
+<body>
+    <header class="cabecalho cabecalho-admin">
+        <div class="conteudo-cabecalho">
+            <div class="topo-cabecalho">
+                <span class="tag-projeto">HelpDesk TI</span>
+
+                <button id="btnTema" class="btn-tema" type="button">
+                    🌙 Modo escuro
+                </button>
+            </div>
+
+            <h1>Área Administrativa</h1>
+            <p>Gerencie, filtre e acompanhe os chamados técnicos cadastrados.</p>
+
+            <div class="acoes-admin-topo">
+                <a href="usuario.html" class="link-voltar">
+                    🛠️ Acessar painel do usuário
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="area area-admin ativa">
+            <section class="cards-estatisticas">
+                <div class="card card-total">
+                    <span>Total</span>
+                    <h2 id="totalChamados">0</h2>
+                    <p>Chamados cadastrados</p>
+                </div>
+
+                <div class="card card-aberto">
+                    <span>Abertos</span>
+                    <h2 id="chamadosAbertos">0</h2>
+                    <p>Aguardando atendimento</p>
+                </div>
+
+                <div class="card card-atendimento">
+                    <span>Em atendimento</span>
+                    <h2 id="chamadosAtendimento">0</h2>
+                    <p>Chamados em andamento</p>
+                </div>
+
+                <div class="card card-resolvido">
+                    <span>Resolvidos</span>
+                    <h2 id="chamadosResolvidos">0</h2>
+                    <p>Chamados finalizados</p>
+                </div>
+            </section>
+
+            <section class="area-chamados painel-admin">
+                <div class="topo-lista topo-admin">
+                    <div>
+                        <span class="etiqueta-admin">Painel de controle</span>
+                        <h2>Painel administrativo</h2>
+                        <p class="subtitulo">
+                            Consulte, filtre, edite e atualize o andamento dos chamados.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="filtros">
+                    <input type="text" id="campoBusca" placeholder="Buscar por ID, nome, setor ou descrição">
+
+                    <select id="filtroStatus">
+                        <option value="Todos">Todos os status</option>
+                        <option value="Aberto">Aberto</option>
+                        <option value="Em atendimento">Em atendimento</option>
+                        <option value="Resolvido">Resolvido</option>
+                    </select>
+
+                    <select id="filtroPrioridade">
+                        <option value="Todas">Todas as prioridades</option>
+                        <option value="Baixa">Baixa</option>
+                        <option value="Média">Média</option>
+                        <option value="Alta">Alta</option>
+                    </select>
+
+                    <button type="button" id="btnLimparFiltros" class="btn-secundario">
+                        Limpar filtros
+                    </button>
+                </div>
+
+                <div id="listaChamados" class="lista-chamados">
+                    <!-- Chamados gerados pelo JavaScript -->
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js?v=200"></script>
+</body>
+</html>
+``

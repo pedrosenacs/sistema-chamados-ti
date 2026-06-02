@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "nome": "Pedro",
+        "setor": "TI",
+        "descricao": "cabo solto",
+        "prioridade": "Alta",
+        "status": "Aberto"
+    },
+    {
+        "id": 2,
+        "nome": "Pedro",
+        "setor": "Suporte",
+        "descricao": "Automação errada",
+        "prioridade": "Média",
+        "status": "Aberto",
+        "data_abertura": "01/06/2026 12:18"
+    }
+]

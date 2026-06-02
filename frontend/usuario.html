@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Usuário - Sistema de Chamados</title>
+    <link rel="stylesheet" href="style.css?v=100">
+</head>
+<body>
+    <header class="cabecalho">
+    <div class="conteudo-cabecalho">
+        <div class="topo-cabecalho">
+            <span class="tag-projeto">HelpDesk TI</span>
+
+            <button id="btnTema" class="btn-tema" type="button">
+                🌙 Modo escuro
+            </button>
+        </div>
+
+        <h1>Área do Usuário</h1>
+        <p>Abra chamados técnicos de forma simples e rápida.</p>
+
+        <div class="acoes-admin-topo">
+            <a href="admin.html" class="link-voltar">
+                🛠️ Acessar painel administrativo 
+            </a>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <section class="area area-usuario ativa">
+            <div class="painel-usuario">
+                <div class="texto-usuario">
+                    <span class="etiqueta">Solicitação de suporte</span>
+
+                    <h2>Abrir novo chamado</h2>
+
+                    <p>
+                        Preencha as informações do problema para registrar uma solicitação de atendimento técnico.
+                        Após o envio, um número de protocolo será gerado automaticamente.
+                    </p>
+
+                    <div class="dicas">
+                        <h3>Orientações</h3>
+                        <ul>
+                            <li>Descreva o problema com clareza.</li>
+                            <li>Informe corretamente o setor.</li>
+                            <li>Escolha a prioridade conforme a urgência.</li>
+                            <li>Guarde o número de protocolo gerado.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="formulario">
+                    <h2 id="tituloFormulario">Novo chamado</h2>
+
+                    <p class="subtitulo" id="subtituloFormulario">
+                        Preencha os dados para registrar uma solicitação.
+                    </p>
+
+                    <form id="formChamado">
+                        <label for="nome">Nome do solicitante</label>
+                        <input type="text" id="nome" placeholder="Ex: Pedro">
+
+                        <label for="setor">Setor</label>
+                        <input type="text" id="setor" placeholder="Ex: Financeiro">
+
+                        <label for="descricao">Descrição do problema</label>
+                        <textarea id="descricao" placeholder="Ex: Computador não liga"></textarea>
+
+                        <label for="prioridade">Prioridade</label>
+                        <select id="prioridade">
+                            <option value="Baixa">Baixa</option>
+                            <option value="Média">Média</option>
+                            <option value="Alta">Alta</option>
+                        </select>
+
+                        <button type="submit" class="btn-principal" id="btnSubmit">
+                            Enviar chamado
+                        </button>
+
+                        <button type="button" class="btn-cancelar-edicao escondido" id="btnCancelarEdicao">
+                            Cancelar edição
+                        </button>
+                    </form>
+                </aside>
+            </div>
+
+            <div id="mensagemProtocolo" class="mensagem-protocolo escondido"></div>
+        </section>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js?v=100"></script>
+</body>
+</html>
